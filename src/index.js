@@ -33,16 +33,27 @@ msginput.onkeypress = (e) => {
     }
   }
 } 
-
-
+ 
+let darkclick = false
 darkmode.onclick = () => {
-  app.style.background = '#00090f'
-  document.querySelector('.sidebar h2').style.color = '#eee'
-  document.querySelectorAll('.sidebar h6 span').forEach(el => el.style.color = '#555')
-  document.querySelectorAll('.menuicons i').forEach(el => el.style.color = '#eee')
-  document.querySelector('.inputcont').style.background = '#222'
-  document.querySelector('.inputcont input').style.color = '#aaa'
-  document.querySelectorAll('.msgcont .msg').forEach(el => el.style.background = '#222')
+  if(darkclick == false) {
+    app.style.background = '#00090f'
+    document.querySelector('.sidebar h2').style.color = '#eee'
+    document.querySelectorAll('.sidebar h6 span').forEach(el => el.style.color = '#555')
+    document.querySelectorAll('.menuicons i').forEach(el => el.style.color = '#eee')
+    document.querySelector('.inputcont').style.background = '#222'
+    document.querySelectorAll('.msgcont .msg').forEach(el => el.style.background = '#222')
+    darkclick = true
+  }
+  else {
+    app.style.background = ''
+    document.querySelector('.sidebar h2').style.color = ''
+    document.querySelectorAll('.sidebar h6 span').forEach(el => el.style.color = '')
+    document.querySelectorAll('.menuicons i').forEach(el => el.style.color = '')
+    document.querySelector('.inputcont').style.background = ''
+    document.querySelectorAll('.msgcont .msg').forEach(el => el.style.background = '')
+    darkclick = false
+  } 
 }
 
 

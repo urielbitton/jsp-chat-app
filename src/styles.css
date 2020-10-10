@@ -76,14 +76,17 @@ input, textarea {
   font-size: 27px;
   color: #555;
   margin-top: 50px;
+  transition: all 0.3s;
 }
 .sidebar h6 {
   margin: 20px 0;
   font-size: 14px;
   color: #bbb;
+  transition: all 0.3s;
 }
 .sidebar h6 i {
   margin-right: 10px;
+  transition: all 0.3s;
 }
 .sidebar h6 span {
   display: block;
@@ -92,7 +95,8 @@ input, textarea {
   color: #111;
   font-size: 12px;
   margin-left: 25px;
-}
+  transition: all 0.3s;
+} 
 .sidebar hr {
   height: 1px;
   width: 120px;
@@ -122,17 +126,17 @@ input, textarea {
   width: 90%;
   padding: 10px;
   padding-bottom: 90px;
-  overflow-y: scroll;
 }
 .chatwindow {
-  position: relative;
-  height: 100%;
+  position: absolute;
+  height:85%;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0;
+  overflow-y: scroll;
 }
-.chatcontainer::-webkit-scrollbar {
+.chatwindow::-webkit-scrollbar {
   display: none;
-}
+} 
 .typecontainer {
   position: absolute;
   bottom: 10px;
@@ -152,6 +156,7 @@ input, textarea {
   border-radius: 15px;
   display: flex;
   align-items: center;
+  transition: all 0.3s;
 }
 .inputcont img {
   margin-right: 20px;
@@ -182,7 +187,7 @@ input, textarea {
   display: block;
   max-width: 60%;
   width: 100%;
-  margin: 10px 0; 
+  margin: 10px; 
 } 
 .msgcont .msg {
   position: relative;
@@ -191,10 +196,12 @@ input, textarea {
   width: 100%;
   padding: 15px 20px;
   border-radius: 15px;
+  transition: all 0.3s;
 }
 .msgleft .msg {
   border-bottom-left-radius: 1px; 
   float: left;
+  background: rgb(83, 172, 255); 
 }
 .msgright .msg {
   border-bottom-right-radius: 1px;
@@ -218,8 +225,14 @@ input, textarea {
 .msgright img {
   float: right;
 }
-.msgleft img {
+.msgleft i {
   float: left;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 15px;
+}
+.msgleft p {
+  color: #fff;
 }
 .msgcont small {
   font-size: 10px;
